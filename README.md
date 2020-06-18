@@ -1,3 +1,4 @@
+GitHub传图太渣，要想复现，可以去看雪看带图的帖子[https://bbs.pediy.com/thread-259511.htm](https://bbs.pediy.com/thread-259511.htm)
 # foundlove
 一个借助phpstudy，实现的注册登录平台，主要用于模拟暴力破解靶场环境。
 ## phpstudy构建网站
@@ -6,6 +7,12 @@
 如图通过phpstudy进入mysql主页，然后按图中顺序，新建foundlove数据库。  
 如图构建一个叫做users的表，并令其字段数为3，点击执行。  
 将三个数据如图设置，然后保存，只要看到下面的截图即设置成功。  
+数据库后端配置：在网站源码的config.php文件下修改数据库配置，  
+``` php
+define('DB_USER', 'root');  
+define('DB_PWD', 'root');  
+```
+分别是数据库的用户名和密码，进PHP study看一下，有个数据库一栏，进去之后可以修改root密码，保证这里的和config.php里的一致。  
 ### 访问验证  
 在浏览器中访问刚刚设置的域名，测试是否能成功访问  
 如果正常显示表面phpstudy成功，然后在Register地方注册一个新账户，foundlove@outlook.com, 密码014523，如果反馈注册成功，则说明数据库连接成功，可以开始下一步实验。  
